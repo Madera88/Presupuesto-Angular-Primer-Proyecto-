@@ -17,8 +17,11 @@
       <div class="col-6">
         <h2 class="ingreso_titulo">Ingresos</h2>
         <app-ingreso
-        *ngFor="let elemento of ingreso"
-        [ingreso]="elemento"></app-ingreso>
+        (posicionBorrar)="borrarMatriz($event)"
+        *ngFor="let elemento of ingreso; let i = index"
+        [ingreso]="elemento"
+        [indice]="i"
+        ></app-ingreso>
       </div>
       <div class="col-6">
         <h2 class="gasto_titulo">gastos</h2>

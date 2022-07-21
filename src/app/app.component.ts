@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Gasto } from './gasto.model';
+import { IndiceBorrar } from './indiceborrar.model';
 import { Ingreso } from './ingreso.model';
 
 @Component({
@@ -33,6 +34,16 @@ export class AppComponent {
     this.GastoTotal+=gasto.gasto;
     
   }
+
+  borrarMatriz(posicion: IndiceBorrar){
+  
+    let aux=posicion.indice;
+    let restar=this.ingreso[aux].ingreso;
+    this.IngresoTotal-=restar;
+    this.ingreso.splice(aux,1);
+  }
+
+
 
   
 }
