@@ -9,4 +9,7 @@ export class CabeceraComponent {
 
   @Input() IngresoTotal:number;
   @Input() GastoTotal:number;
+  @Input() Porcentaje:number;
+  
+  
 }

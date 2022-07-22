@@ -7,7 +7,7 @@
                 <div class="elemento_valor">{{gasto.gasto}}</div>
                 <div class="elemento_porcentaje">{{gasto.porcentaje}}%</div>
                 <div class="elemento_eliminar">
-                    <button class="elemento_eliminar--btn">X</button>
+                    <button class="elemento_eliminar--btn"  (click)="borrar(indice)" #boton>X</button>
                 </div>
             </div>
         </div>

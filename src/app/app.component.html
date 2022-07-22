@@ -1,6 +1,7 @@
 <app-cabecera
 [IngresoTotal]="IngresoTotal"
 [GastoTotal]="GastoTotal"
+[Porcentaje]="Porcentaje"
 ></app-cabecera>
 
 
@@ -26,9 +27,11 @@
       <div class="col-6">
         <h2 class="gasto_titulo">gastos</h2>
         <app-gasto
+        (posicionBorrarGasto)="borrarMatrizGasto($event)"
         [IngresoTotal]="IngresoTotal"
-        *ngFor="let elemento of gasto"
-        [gasto]="elemento"></app-gasto>
+        *ngFor="let elemento of gasto; let i = index"
+        [gasto]="elemento"
+        [indice]="i" ></app-gasto>
       </div>
     </div>
     
